@@ -1,0 +1,28 @@
+.btn-start,
+.btn-start:link,
+.btn-start:visited,
+#btn-make,
+#btn-make:link,
+#btn-make:visited {
+	display: inline-block;
+	text-decoration: none;
+	font-size: 24px;
+	border-radius: 6px;
+	border: none;
+	font-family: inherit;
+	font-weight: 600;
+	padding: 12px 36px;
+	margin-left: 40px;
+	cursor: pointer;
+	transition: all 0.3s;
+	background-color: #e67700;
+	color: #4a0805;
+}
+
+.btn-start:hover,
+.btn-start:active,
+#btn-make:hover,
+#btn-make:active {
+	background-color: #931009;
+	color: #fff;
+}
