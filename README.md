@@ -5,5 +5,6 @@ A food application where you can personalize your own favorite Hotdog. It was bu
 # languages
 - VueJs
 - JavaScript
+- NodeJs
 - HTML
 - CSS
