@@ -9,12 +9,14 @@
 					</RouterLink>
 					<p>Make Your Hotdog &trade;</p>
 				</div>
+
 				<p class="contact-text">
 					<img
 						class="contact-icons"
 						src="../img/icons/location-icon.svg"
 						alt="location icon"
 					/>
+
 					<a
 						class="link-icon"
 						rel="noopener"
@@ -25,6 +27,7 @@
 					</a>
 				</p>
 			</div>
+
 			<div class="contact-col">
 				<p class="contact-text">
 					<img
@@ -32,6 +35,7 @@
 						src="../img/icons/phone-icon.svg"
 						alt="smartphone icon"
 					/>
+
 					<a
 						class="link-icon"
 						rel="noopener"
@@ -40,12 +44,14 @@
 						+55 62 98144-7999
 					</a>
 				</p>
+
 				<p class="contact-text">
 					<img
 						class="contact-icons"
 						src="../img/icons/mail-icon.svg"
 						alt="mail icon"
 					/>
+
 					<a
 						class="link-icon"
 						rel="noopener"
@@ -54,21 +60,24 @@
 						aurelioaborges@gmail.com
 					</a>
 				</p>
+
 				<p class="contact-text">
 					<img
 						class="contact-icons"
 						src="../img/icons/browser-icon.svg"
 						alt="browser icon"
 					/>
+
 					<a
 						class="link-icon"
 						rel="noopener"
-						href="https://aurelioborges.netlify.app/"
+						href="https://aureliojoseph.github.io/landing-page-2.0_eng"
 						>
 						My Portfolio
 					</a>
 				</p>
 			</div>
+
 			<div class="contact-col">
 				<p class="social-heading">Social</p>
 				<ul class="icon-list">
@@ -79,6 +88,7 @@
 							href="https://www.linkedin.com/in/aurelioaborges/"
 							target="_blank"
 							>
+
 							<img
 								class="contact-icons"
 								src="../img/icons/linkedin-icon.svg"
@@ -86,6 +96,7 @@
 							/>
 						</a>
 					</li>
+
 					<li>
 						<a
 							class="link-icon"
@@ -93,6 +104,7 @@
 							href="https://github.com/aureliojoseph"
 							target="_blank"
 							>
+
 							<img
 								class="contact-icons"
 								src="../img/icons/github-icon.svg"
@@ -100,6 +112,7 @@
 							/>
 						</a>
 					</li>
+
 					<li>
 						<a
 							class="link-icon"
@@ -107,6 +120,7 @@
 							href="https://www.instagram.com/aureliojoseph/"
 							target="_blank"
 							>
+
 							<img
 								class="contact-icons"
 								src="../img/icons/instagram-icon.svg"
