@@ -3,6 +3,7 @@
 		<RouterLink to="/" id="logo-url">
 			<img :src="logo" :alt="alt" id="logo" />
 		</RouterLink>
+
 		<p>Copyright &copy; {{ currentYear }} by Aurelio Borges</p>
 	</footer>
 </template>

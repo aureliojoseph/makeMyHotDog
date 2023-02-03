@@ -1,6 +1,7 @@
 <template>
 	<div id="hotdog-table">
 		<Message :msg="msg" v-show="msg" />
+
 		<div>
 			<div id="hotdog-table-heading">
 				<div class="order-id">#:</div>
@@ -12,48 +13,53 @@
 				<div>Actions:</div>
 			</div>
 		</div>
+
 		<div id="hotdog-table-rows">
 			<div
 				v-for="hotdog in hotdogs"
 				:key="hotdog.id"
 				class="hotdog-table-row"
-				>
+			>
 				<div class="order-number">{{ hotdog.id }}</div>
 				<div>{{ hotdog.name }}</div>
 				<div>{{ hotdog.bread }}</div>
 				<div>{{ hotdog.sausage }}</div>
 				<div>{{ hotdog.sauce }}</div>
+
 				<div>
 					<ul class="toppings-li">
 						<li
 							v-for="(toppings, index) in hotdog.toppings"
 							:key="index"
-							>
+						>
 							{{ toppings }}
 						</li>
 					</ul>
 				</div>
+
 				<div>
 					<select
 						name="status"
 						id="status"
 						@change="updateHotdog($event, hotdog.id)"
-						>
+					>
 						<option value="">Select</option>
+
 						<option
 							v-for="s in status"
 							:key="s.id"
 							:value="s.type"
 							:selected="hotdog.status == s.type"
-							>
+						>
 							{{ s.type }}
 						</option>
 					</select>
 				</div>
+
 				<button
 					class="delete-btn"
 					@click="deleteHotdog(hotdog.id)"
-					>
+				>
 					Cancel
 				</button>
 			</div>
@@ -63,6 +69,7 @@
 
 <script>
 	import Message from './Message.vue'
+
 	export default {
 		name: 'Dashboard',
 		components: { Message },
@@ -94,6 +101,7 @@
 				const req = await fetch(`http://localhost:3000/hotdogs/${id}`, {
 					method: 'DELETE',
 				});
+
 				const res = await req.json();
 
 				// insert system message
@@ -107,12 +115,15 @@
 
 			async updateHotdog(event, id) {
 				const option = event.target.value;
+
 				const dataJson = JSON.stringify({ status: option });
+
 				const req = await fetch(`http://localhost:3000/hotdogs/${id}`, {
 					method: 'PATCH',
 					headers: { 'Content-Type': 'application/json' },
 					body: dataJson,
 				});
+
 				const res = await req.json();
 
 				// insert system message

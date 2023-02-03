@@ -3,10 +3,15 @@
 		<RouterLink to="/" id="logo-url">
 			<img :src="logo" :alt="alt" id="logo" />
 		</RouterLink>
+
 		<RouterLink to="/">Home</RouterLink>
+
 		<hr />
+
 		<RouterLink to="/orders">Orders</RouterLink>
+
 		<hr />
+
 		<RouterLink to="/contact">Contact</RouterLink>
 	</div>
 </template>

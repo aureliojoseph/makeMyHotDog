@@ -1,12 +1,19 @@
 <template>
 	<div id="main-banner">
 		<h1>Make Your Hotdog</h1>
-		<button class="btn-start" href="/hotdogform">Order now &downarrow;</button>
+
+		<button
+			class="btn-start"
+			href="/hotdogform"
+		>
+			Order now &downarrow;
+		</button>
 	</div>
 </template>
 
 <script>
 	import '../assets/button.css'
+
 	export default {
 		name: 'Banner'
 	}

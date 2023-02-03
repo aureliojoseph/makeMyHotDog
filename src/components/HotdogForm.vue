@@ -4,7 +4,7 @@
 			<form
 				id="hotdog-form"
 				@submit="createHotdog"
-				>
+			>
 				<div class="input-container">
 					<label for="name">Full Name</label>
 					<input
@@ -15,6 +15,7 @@
 						required
 					/>
 				</div>
+
 				<div class="input-container">
 					<label for="bread">Choose your bread</label>
 					<select
@@ -22,17 +23,19 @@
 						name
 						required
 						v-model="bread"
-						>
+					>
 						<option value="">Select your bread:</option>
+
 						<option
 							v-for="bread in breads"
 							:key="bread.id"
 							:value="bread.type"
-							>
+						>
 							{{ bread.type }}
 						</option>
 					</select>
 				</div>
+
 				<div class="input-container">
 					<label for="sausage">Choose your sausage</label>
 					<select
@@ -40,17 +43,19 @@
 						name
 						v-model="sausage"
 						required
-						>
+					>
 						<option value="">Select your sausage:</option>
+
 						<option
 							v-for="sausage in sausages"
 							:key="sausage.id"
 							:value="sausage.type"
-							>
+						>
 							{{ sausage.type }}
 						</option>
 					</select>
 				</div>
+
 				<div class="input-container">
 					<label for="sauce">Choose your sauce</label>
 					<select
@@ -58,17 +63,19 @@
 						name
 						required
 						v-model="sauce"
-						>
+					>
 						<option value="">Select your sauce:</option>
+
 						<option
 							v-for="sauce in sauces"
 							:key="sauce.id"
 							:value="sauce.type"
-							>
+						>
 							{{ sauce.type }}
 						</option>
 					</select>
 				</div>
+
 				<div id="toppings-container" class="input-container">
 					<label
 						id="toppings-title"
@@ -76,20 +83,23 @@
 						>
 						Choose your toppings:
 					</label>
+
 					<div
 						v-for="topping in toppingsData"
 						:key="topping.id"
 						class="checkbox-container"
-						>
+					>
 						<input
 							:value="topping.type"
 							type="checkbox"
 							name="toppings"
 							v-model="toppings"
 						/>
+
 						<span>{{ topping.type }}</span>
 					</div>
 				</div>
+
 				<div class="input-container">
 					<input
 						type="submit"
@@ -100,6 +110,7 @@
 				</div>
 			</form>
 		</div>
+
 		<Message :msg="msg" v-show="msg" />
 	</div>
 </template>
