@@ -139,7 +139,7 @@
 		name: 'Contact',
 		data() {
 			return {
-				logo: '/src/img/icons/favicon.ico',
+				logo: '../img/icons/favicon.ico',
 				alt: 'Make your hotdog'
 			}
 		}

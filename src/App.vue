@@ -17,7 +17,7 @@
 		},
 		data() {
 			return {
-				logo_src: '/src/img/icons/favicon.ico',
+				logo_src: '../img/icons/favicon.ico',
 				app_name: 'Make your hotdog'
 			}
 		}
