@@ -170,10 +170,10 @@
 				setTimeout(() => (this.msg = ''), 5000);
 			},
 		},
-		mounted() {
-			this.getOrders();
-			this.getStatus();
-		}
+		// mounted() {
+		// 	this.getOrders();
+		// 	this.getStatus();
+		// }
 	}
 </script>
 
