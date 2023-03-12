@@ -1,7 +1,7 @@
 <template>
 	<footer id="footer">
 		<RouterLink to="/" id="logo-url">
-			<img :src="logo" :alt="alt" id="logo" />
+			<img src="../img/icons/favicon.ico" :alt="alt" id="logo" />
 		</RouterLink>
 
 		<p>Copyright &copy; {{ currentYear }} by Aurelio Borges</p>
@@ -12,7 +12,6 @@
 	export default {
 		name: 'Footer',
 		props: [
-			'logo',
 			'alt'
 		],
 		computed: {

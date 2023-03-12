@@ -5,7 +5,7 @@
 			<div class="contact-col">
 				<div class="visit-us">
 					<RouterLink to="/" id="logo-url">
-						<img :src="logo" :alt="alt" id="logo" />
+						<img src="../img/icons/favicon.ico" :alt="alt" id="logo" />
 					</RouterLink>
 					<p>Make Your Hotdog &trade;</p>
 				</div>
@@ -139,7 +139,6 @@
 		name: 'Contact',
 		data() {
 			return {
-				logo: '../img/icons/favicon.ico',
 				alt: 'Make your hotdog'
 			}
 		}

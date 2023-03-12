@@ -1,7 +1,7 @@
 <template>
 	<div id="nav">
 		<RouterLink to="/" id="logo-url">
-			<img :src="logo" :alt="alt" id="logo" />
+			<img src="../img/icons/favicon.ico" :alt="alt" id="logo" />
 		</RouterLink>
 
 		<RouterLink to="/">Home</RouterLink>
@@ -20,7 +20,6 @@
 	export default {
 		name: 'Navbar',
 		props: [
-			'logo',
 			'alt'
 		]
 	}
