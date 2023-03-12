@@ -75,7 +75,44 @@
 		components: { Message },
 		data() {
 			return {
-				hotdogs: null,
+				hotdogs: [
+					{
+						name: "Aurelio Joseph",
+						bread: "White Traditional",
+						sausage: "Turkey and Chicken",
+						sauce: "Chipotle",
+						toppings: ["Caramelised Onions", "Spicy Chilli Cream", "Melted Cheese"],
+						status: "Requested",
+						id: 1
+					},
+					{
+						name: "Robert de Niro",
+						bread: "White with Sesame",
+						sausage: "Traditional",
+						sauce: "Barbecue",
+						toppings: ["Crispy Onions", "Spicy Chilli Cream"],
+						status: "Requested",
+						id: 2
+					},
+					{
+						name: "Thais Cintra",
+						bread: "Australian",
+						sausage: "Viena",
+						sauce: "Homemade Ketchup with Fresh Tomatoes",
+						toppings: ["Crispy Bacon", "Cucumber and Spring Onion"],
+						status: "In Production",
+						id: 3
+					},
+					{
+						name: "Pedro Pedreira",
+						bread: "Brioche",
+						sausage: "Vegan",
+						sauce: "Dijon Mustard",
+						toppings: ["Guacamole", "Crispy Onions"],
+						status: "Completed",
+						id: 4
+					}
+				],
 				hotdogs_id: null,
 				status: [],
 				msg: null
