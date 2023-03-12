@@ -126,10 +126,126 @@
 		},
 		data() {
 			return {
-				breads: null,
-				sausages: null,
-				sauces: null,
-				toppingsData: null,
+				breads: [
+					{
+						id: 1,
+						type: "White Traditional"
+					},
+					{
+						id: 2,
+						type: "White with Sesame"
+					},
+					{
+						id: 3,
+						type: "Brioche"
+					},
+					{
+						id: 4,
+						type: "Australian"
+					},
+					{
+						id: 5,
+						type: "Mexican"
+					}
+				],
+				sausages: [
+					{
+						id: 1,
+						type: "Traditional"
+					},
+					{
+						id: 2,
+						type: "Turkey and Chicken"
+					},
+					{
+						id: 3,
+						type: "Viena"
+					},
+					{
+						id: 4,
+						type: "Bratwurst"
+					},
+					{
+						id: 5,
+						type: "Vegan"
+					}
+				],
+				sauces: [
+					{
+						id: 1,
+						type: "Ketchup and Mustard"
+					},
+					{
+						id: 2,
+						type: "Barbecue"
+					},
+					{
+						id: 3,
+						type: "Dijon Mustard"
+					},
+					{
+						id: 4,
+						type: "Chipotle"
+					},
+					{
+						id: 5,
+						type: "Homemade Ketchup with Fresh Tomatoes"
+					},
+					{
+						id: 6,
+						type: "Melted Cheese"
+					},
+					{
+						id: 7,
+						type: "Chimichurri"
+					},
+					{
+						id: 8,
+						type: "No Sauce"
+					}
+				],
+				toppingsData: [
+					{
+						id: 1,
+						type: "Crispy Bacon"
+					},
+					{
+						id: 2,
+						type: "Spicy Chilli Cream"
+					},
+					{
+						id: 3,
+						type: "Guacamole"
+					},
+					{
+						id: 4,
+						type: "Melted Cheese"
+					},
+					{
+						id: 5,
+						type: "Caramelised Onions"
+					},
+					{
+						id: 6,
+						type: "Sauerkraut"
+					},
+					{
+						id: 7,
+						type: "Bacon Crumbs with Fresh Herbs"
+					},
+					{
+						id: 8,
+						type: "Cucumber and Spring Onion"
+					},
+					{
+						id: 9,
+						type: "Crispy Onions"
+					},
+					{
+						id: 10,
+						type: "No Toppings"
+					}
+				],
 				name: null,
 				bread: null,
 				sausage: null,
@@ -138,60 +254,60 @@
 				msg: null
 			}
 		},
-		methods: {
-			async getIngredients() {
-				const req = await fetch('http://localhost:3000/ingredients');
-				// fetch at "db.json" file the 'ingredients' object
+		// methods: {
+		// 	async getIngredients() {
+		// 		const req = await fetch('http://localhost:3000/ingredients');
+		// 		// fetch at "db.json" file the 'ingredients' object
 
-				const data = await req.json();
-				// fetch inside the object each item according to 'id' and 'type'
+		// 		const data = await req.json();
+		// 		// fetch inside the object each item according to 'id' and 'type'
 
-				this.breads = data.breads;
-				this.sausages = data.sausages;
-				this.sauces = data.sauces;
-				this.toppingsData = data.toppings;
-			},
+		// 		this.breads = data.breads;
+		// 		this.sausages = data.sausages;
+		// 		this.sauces = data.sauces;
+		// 		this.toppingsData = data.toppings;
+		// 	},
 
-			// send the form data to the backend
-			async createHotdog(e) {
-				e.preventDefault();
-				const data = {
-					name: this.name,
-					bread: this.bread,
-					sausage: this.sausage,
-					sauce: this.sauce,
-					toppings: Array.from(this.toppings),
-					status: 'Requested',
-				};
+		// 	// send the form data to the backend
+		// 	async createHotdog(e) {
+		// 		e.preventDefault();
+		// 		const data = {
+		// 			name: this.name,
+		// 			bread: this.bread,
+		// 			sausage: this.sausage,
+		// 			sauce: this.sauce,
+		// 			toppings: Array.from(this.toppings),
+		// 			status: 'Requested',
+		// 		};
 
-				// converts the criated object into a Json format text string
-				const dataJson = JSON.stringify(data);
+		// 		// converts the criated object into a Json format text string
+		// 		const dataJson = JSON.stringify(data);
 
-				const req = await fetch('http://localhost:3000/hotdogs', {
-					method: 'POST',
-					headers: { 'Content-Type': 'application/json' },
-					body: dataJson,
-				});
+		// 		const req = await fetch('http://localhost:3000/hotdogs', {
+		// 			method: 'POST',
+		// 			headers: { 'Content-Type': 'application/json' },
+		// 			body: dataJson,
+		// 		});
 
-				const res = await req.json();
+		// 		const res = await req.json();
 
-				// insert system message
-				this.msg = `Order #${res.id} placed successfully!`;
+		// 		// insert system message
+		// 		this.msg = `Order #${res.id} placed successfully!`;
 
-				// clear system message
-				setTimeout(() => (this.msg = ''), 3000);
+		// 		// clear system message
+		// 		setTimeout(() => (this.msg = ''), 3000);
 
-				// clear the form
-				this.name = '';
-				this.breads = '';
-				this.sausages = '';
-				this.sauces = '';
-				this.toppings = '';
-			},
-		},
-		mounted() {
-			this.getIngredients()
-		}
+		// 		// clear the form
+		// 		this.name = '';
+		// 		this.breads = '';
+		// 		this.sausages = '';
+		// 		this.sauces = '';
+		// 		this.toppings = '';
+		// 	},
+		// },
+		// mounted() {
+		// 	this.getIngredients()
+		// }
 	}
 </script>
 

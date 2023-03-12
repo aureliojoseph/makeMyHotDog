@@ -118,58 +118,58 @@
 				msg: null
 			}
 		},
-		methods: {
-			async getOrders() {
-				const req = await fetch('http://localhost:3000/hotdogs');
-				const data = await req.json();
-				this.hotdogs = data;
+		// methods: {
+		// 	async getOrders() {
+		// 		const req = await fetch('http://localhost:3000/hotdogs');
+		// 		const data = await req.json();
+		// 		this.hotdogs = data;
 
-				// fetch status
-				this.getStatus();
-			},
+		// 		// fetch status
+		// 		this.getStatus();
+		// 	},
 
-			async getStatus() {
-				const req = await fetch('http://localhost:3000/status');
-				const data = await req.json();
-				this.status = data;
-			},
+		// 	async getStatus() {
+		// 		const req = await fetch('http://localhost:3000/status');
+		// 		const data = await req.json();
+		// 		this.status = data;
+		// 	},
 
-			async deleteHotdog(id) {
-				const req = await fetch(`http://localhost:3000/hotdogs/${id}`, {
-					method: 'DELETE',
-				});
+		// 	async deleteHotdog(id) {
+		// 		const req = await fetch(`http://localhost:3000/hotdogs/${id}`, {
+		// 			method: 'DELETE',
+		// 		});
 
-				const res = await req.json();
+		// 		const res = await req.json();
 
-				// insert system message
-				this.msg = `Order canceled successfully!`;
+		// 		// insert system message
+		// 		this.msg = `Order canceled successfully!`;
 
-				// clear system message
-				setTimeout(() => (this.msg = ''), 3000);
+		// 		// clear system message
+		// 		setTimeout(() => (this.msg = ''), 3000);
 
-				this.getOrders();
-			},
+		// 		this.getOrders();
+		// 	},
 
-			async updateHotdog(event, id) {
-				const option = event.target.value;
+		// 	async updateHotdog(event, id) {
+		// 		const option = event.target.value;
 
-				const dataJson = JSON.stringify({ status: option });
+		// 		const dataJson = JSON.stringify({ status: option });
 
-				const req = await fetch(`http://localhost:3000/hotdogs/${id}`, {
-					method: 'PATCH',
-					headers: { 'Content-Type': 'application/json' },
-					body: dataJson,
-				});
+		// 		const req = await fetch(`http://localhost:3000/hotdogs/${id}`, {
+		// 			method: 'PATCH',
+		// 			headers: { 'Content-Type': 'application/json' },
+		// 			body: dataJson,
+		// 		});
 
-				const res = await req.json();
+		// 		const res = await req.json();
 
-				// insert system message
-				this.msg = `Order #${res.id} successfully updated to ${res.status}!`;
+		// 		// insert system message
+		// 		this.msg = `Order #${res.id} successfully updated to ${res.status}!`;
 
-				// clear system message
-				setTimeout(() => (this.msg = ''), 5000);
-			},
-		},
+		// 		// clear system message
+		// 		setTimeout(() => (this.msg = ''), 5000);
+		// 	},
+		// },
 		// mounted() {
 		// 	this.getOrders();
 		// 	this.getStatus();
